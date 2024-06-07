@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"log"
 
 	"github.com/gofiber/fiber/v2"
 )
@@ -9,9 +10,9 @@ import (
 func main() {
 	fmt.Println("App Started")
 
-	const PORT = ":3000"
+	const PORT = ":4000"
 
 	app := fiber.New()
 
-	app.Listen(PORT)
+	log.Fatal(app.Listen(PORT))
 }

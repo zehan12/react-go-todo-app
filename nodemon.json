@@ -1,0 +1,6 @@
+{
+    "watch": ["."],
+    "ignore": ["client"],
+    "exec": "go run main.go",
+    "signal": "SIGTERM"
+}
