@@ -30,6 +30,7 @@ func main() {
 	todoRoutes := apiv1.Group("/todo")
 	todoRoutes.Get("/", api.HandleGetTodos)
 	todoRoutes.Post("/", api.HandleCreateTodo)
+	todoRoutes.Get("/:id", api.HandleGetTodo)
 
 	log.Fatal(app.Listen(PORT))
 }
