@@ -11,7 +11,7 @@ import (
 func main() {
 	fmt.Println("App Started")
 
-	const PORT = ":4000"
+	const PORT = ":3000"
 
 	app := fiber.New()
 
@@ -28,6 +28,7 @@ func main() {
 
 	// todo routes
 	todoRoutes := apiv1.Group("/todo")
+	todoRoutes.Get("/", api.HandleGetTodos)
 	todoRoutes.Post("/", api.HandleCreateTodo)
 
 	log.Fatal(app.Listen(PORT))
